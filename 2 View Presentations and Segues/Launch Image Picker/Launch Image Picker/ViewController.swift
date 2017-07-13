@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var nextController = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +17,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func experiment(_ sender: UIButton) {
+        let image = UIImage()
+        let nextController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
 
         self.present(nextController, animated: true, completion: nil)
     }
