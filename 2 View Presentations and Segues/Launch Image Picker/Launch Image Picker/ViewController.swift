@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func experiment(_ sender: UIButton) {
-        let image = UIImage()
-        let nextController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-
+        let nextController = UIAlertController(title: "Aleart", message: "aleart testing", preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            nextController.dismiss(animated: true, completion: nil)
+        }
+        nextController.addAction(okAction)
         self.present(nextController, animated: true, completion: nil)
     }
 
