@@ -25,6 +25,12 @@ class RollViewController: UIViewController {
 
     // MARK: Actions
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! DiceViewController
+        vc.firstValue = randomDiceValue()
+        vc.secondValue = randomDiceValue()
+    }
+    
     @IBAction func rollTheDice(){
         
     }
